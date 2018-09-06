@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 
-class Home extends Component {
+class HomeScreen extends Component {
     render() {
-        return(
+        return (
             <h1>Hello from Home Screen!</h1>
         );
     }
 };
 
-export default Home;
+export { HomeScreen };
