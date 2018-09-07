@@ -24,8 +24,7 @@ class App extends Component {
                         <Route exact path='/' component={HomeScreen} />
                         <Route path='/register' component={RegisterScreen} />
                         <Route path='/login' component={LoginScreen} />
-                        {/* will make this a private route later */}
-                        <Route path='/profile' component={ProfileScreen} />
+                        <Route path='/profile' component={ProfileScreen} /> {/* will make this a private route later */}
                         <Route path='/pickem' component={PickemScreen} />
                         <Route path='/standings' component={StandingsScreen} />
                     </Switch>
