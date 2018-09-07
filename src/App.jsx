@@ -11,7 +11,6 @@ import {
     StandingsScreen
 } from './screens';
 
-
 class App extends Component {
     render() {
         return (
