@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const styles = {
+const styles = theme => ({
     root: {
         flexGrow: 1,
     },
@@ -20,7 +20,12 @@ const styles = {
         marginLeft: -12,
         marginRight: 20,
     },
-};
+    buttonHover: {
+        '&:hover': {
+            backgroundColor: '#6573c3'
+        }
+    },
+});
 
 const Navbar = (props) => {
     const { classes } = props;
@@ -34,12 +39,12 @@ const Navbar = (props) => {
                     <Typography variant="title" color="inherit" className={classes.flex}>
                         Scott Stapp Memorial Pick'em League
                     </Typography>
-                    <Button color='inherit' component={Link} to='/'>Home</Button>
-                    <Button color='inherit' component={Link} to='/register'>Register</Button>
-                    <Button color='inherit' component={Link} to='/login'>Login</Button>
-                    <Button color='inherit' component={Link} to='/profile'>Profile</Button>
-                    <Button color='inherit' component={Link} to='/pickem'>Pick'em</Button>
-                    <Button color='inherit' component={Link} to='/standings'>Standings</Button>
+                    <Button color='inherit' className={classes.buttonHover} component={Link} to='/'>Home</Button>
+                    <Button color='inherit' className={classes.buttonHover} component={Link} to='/register'>Register</Button>
+                    <Button color='inherit' className={classes.buttonHover} component={Link} to='/login'>Login</Button>
+                    <Button color='inherit' className={classes.buttonHover} component={Link} to='/profile'>Profile</Button>
+                    <Button color='inherit' className={classes.buttonHover} component={Link} to='/pickem'>Pick'em</Button>
+                    <Button color='inherit' className={classes.buttonHover} component={Link} to='/standings'>Standings</Button>
                 </Toolbar>
             </AppBar>
         </div>
