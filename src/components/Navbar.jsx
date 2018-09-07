@@ -34,12 +34,12 @@ const Navbar = (props) => {
                     <Typography variant="title" color="inherit" className={classes.flex}>
                         Scott Stapp Memorial Pick'em League
                     </Typography>
-                    <Button color="white"><Link to='/'>Home</Link></Button>
-                    <Link to='/register'>Register</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/profile'>Profile</Link>
-                    <Link to='/pickem'>Pickem</Link>
-                    <Link to='/standings'>Standings</Link>
+                    <Button color='inherit' component={Link} to='/'>Home</Button>
+                    <Button color='inherit' component={Link} to='/register'>Register</Button>
+                    <Button color='inherit' component={Link} to='/login'>Login</Button>
+                    <Button color='inherit' component={Link} to='/profile'>Profile</Button>
+                    <Button color='inherit' component={Link} to='/pickem'>Pick'em</Button>
+                    <Button color='inherit' component={Link} to='/standings'>Standings</Button>
                 </Toolbar>
             </AppBar>
         </div>
