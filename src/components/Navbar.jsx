@@ -27,7 +27,7 @@ const styles = theme => ({
     },
 });
 
-const Navbar = (props) => {
+const PureNavbar = (props) => {
     const { classes } = props;
     return (
         <div className={classes.root}>
@@ -51,8 +51,10 @@ const Navbar = (props) => {
     );
 };
 
-Navbar.propTypes = {
+PureNavbar.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Navbar);
+const Navbar = withStyles(styles)(PureNavbar);
+
+export { Navbar };
