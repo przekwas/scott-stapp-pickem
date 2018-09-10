@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import Navbar from './components/Navbar';
 import {
     HomeScreen,
     RegisterScreen,
@@ -10,6 +8,10 @@ import {
     PickemScreen,
     StandingsScreen
 } from './screens';
+import {
+    Navbar,
+    Footer
+} from './components';
 
 class App extends Component {
     render() {
@@ -27,6 +29,8 @@ class App extends Component {
                         <Route path='/pickem' component={PickemScreen} />
                         <Route path='/standings' component={StandingsScreen} />
                     </Switch>
+
+                    <Footer />
 
                 </Fragment>
             </Router>
