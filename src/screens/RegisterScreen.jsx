@@ -114,7 +114,7 @@ class PureRegisterScreen extends Component {
     }
 };
 
-TextField.propTypes = {
+PureRegisterScreen.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
