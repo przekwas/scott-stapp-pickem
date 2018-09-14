@@ -19,7 +19,7 @@ class PureHomeScreen extends Component {
             <Fragment>
                 <div className={classes.root}>
                     <Grid container direction="row" justify="center" alignItems="center">
-                        <Grid item xs>
+                        <Grid item>
                             <img alt='Creed Logo' src={CreedLogo} />
                         </Grid>
                     </Grid>
