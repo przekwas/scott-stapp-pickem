@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
@@ -28,6 +28,16 @@ const styles = theme => ({
     metalFont: {
         fontFamily: 'Metal Mania',
     },
+    button: {
+        marginTop: theme.spacing.unit * 3,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'white',
+        backgroundColor: '#f50057',
+        '&:hover': {
+            backgroundColor: '#C5B358'
+        }
+    }
 });
 
 class PureRegisterScreen extends Component {
@@ -109,6 +119,13 @@ class PureRegisterScreen extends Component {
                                 type="password"
                                 autoComplete="current-password"
                             />
+                            <Button
+                                variant="contained"
+                                type="submit"
+                                size="large"
+                                className={classes.button}>
+                                Your precious creation.  You will submit.  You will get it.
+                            </Button>
                         </form>
                     </CardContent>
                 </Card>
