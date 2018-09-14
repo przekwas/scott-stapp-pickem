@@ -26,7 +26,7 @@ const styles = theme => ({
     },
     buttonHover: {
         '&:hover': {
-            backgroundColor: '#6573c3'
+            backgroundColor: '#D4AF37'
         }
     },
     test: {
