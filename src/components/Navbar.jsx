@@ -26,10 +26,10 @@ const styles = theme => ({
     },
     buttonHover: {
         '&:hover': {
-            backgroundColor: '#D4AF37'
+            backgroundColor: '#C5B358'
         }
     },
-    test: {
+    metalFont: {
         fontFamily: 'Metal Mania'
     }
 });
@@ -43,7 +43,7 @@ const PureNavbar = (props) => {
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="title" color="inherit" className={classNames(classes.flex, classes.test)}>
+                    <Typography variant="title" color="inherit" className={classNames(classes.flex, classes.metalFont)}>
                         Scott Stapp Memorial Pick'em League
                     </Typography>
                     <Button color='inherit' className={classes.buttonHover} component={Link} to='/'>Home</Button>
