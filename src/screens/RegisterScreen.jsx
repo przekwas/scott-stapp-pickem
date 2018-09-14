@@ -25,6 +25,9 @@ const styles = theme => ({
     menu: {
         width: 200,
     },
+    metalFont: {
+        fontFamily: 'Metal Mania',
+    },
 });
 
 class PureRegisterScreen extends Component {
@@ -64,7 +67,7 @@ class PureRegisterScreen extends Component {
             <Fragment>
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography gutterBottom variant='headline' component='h1'>
+                        <Typography className={classes.metalFont} gutterBottom variant='headline' component='h1'>
                             Registration
                         </Typography>
                         <form className={classes.container} noValidate autoComplete="off">
