@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
     footer: {
         backgroundColor: 'black',
-        marginTop: theme.spacing.unit * 8,
+        marginTop: theme.spacing.unit * 3,
         padding: `${theme.spacing.unit * 6}px 0`,
     },
     metalFont: {
@@ -16,7 +16,7 @@ const styles = theme => ({
 });
 
 const PureFooter = (props) => {
-    const { classes } = props
+    const { classes } = props;
     return (
         <footer className={classes.footer}>
             <Typography className={classes.metalFont} variant="display3" align="center" gutterBottom>
