@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import { QuoteGenerator } from './QuoteGenerator';
 
 const styles = theme => ({
     footer: {
@@ -19,11 +20,11 @@ const PureFooter = (props) => {
     const { classes } = props;
     return (
         <footer className={classes.footer}>
-            <Typography className={classes.metalFont} variant="display3" align="center" gutterBottom>
-                Footer
+            <Typography className={classes.metalFont} variant="display1" align="center" gutterBottom>
+                Scott Stapp Memorial Pick'em League
         </Typography>
             <Typography className={classes.metalFont} variant="title" align="center" color="textSecondary" component="p">
-                Something here to give the footer a purpose!
+                <QuoteGenerator />
         </Typography>
         </footer>
     );
