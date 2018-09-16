@@ -2,16 +2,16 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import mockTeamGenerator from '../utilities/mockTeamGenerator';
-import { TeamCard } from '../components/TeamCard';
+import { TeamCard, Spinner } from '../components';
 
 const styles = theme => ({
     root: {
         ...theme.mixins.gutters(),
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
-        margin: '1em'
+        margin: '1em',
     },
 });
 
@@ -24,7 +24,7 @@ class PurePickemScreen extends Component {
         };
     }
 
-    async componentWillMount() {
+    async componentDidMount() {
         try {
             let homeTeam = await mockTeamGenerator();
             let awayTeam = await mockTeamGenerator();
@@ -39,13 +39,22 @@ class PurePickemScreen extends Component {
 
     render() {
         const { classes } = this.props;
-        return (
-            <Fragment>
-                <Paper className={classes.root} elevation={1}>
-                    <TeamCard />
-                </Paper>
-            </Fragment>
-        );
+
+        if (this.state.homeTeam && this.state.awayTeam) {
+            return (
+                <Fragment>
+                    <Paper className={classes.root} elevation={1}>
+                        <Grid container spacing={24}>
+                            <Grid item>
+                                <TeamCard team={this.state.homeTeam} />
+                            </Grid>
+                        </Grid>
+                    </Paper>
+                </Fragment>
+            );
+        } else {
+            return <Spinner />
+        }
     }
 };
 
