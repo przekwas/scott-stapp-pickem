@@ -22,6 +22,7 @@ class QuoteGenerator extends Component {
         return (
             <Fragment>
                 <p>" {this.state.quote} "</p>
+                <p style={{ fontStyle: 'italic' }}>- Scott Stapp, Creed</p>
             </Fragment>
         );
     }
