@@ -17,9 +17,6 @@ const styles = theme => ({
     quoteColor: {
         color: 'white'
     },
-    authorText: {
-        fontStyle: 'italic'
-    }
 });
 
 const PureFooter = (props) => {
@@ -29,9 +26,8 @@ const PureFooter = (props) => {
             <Typography className={classes.metalFont} variant="title" align="center" gutterBottom>
                 Scott Stapp Memorial Pick'em League
         </Typography>
-            <Typography className={classes.quoteColor} variant="subheading" align="center" component="p">
+            <Typography className={classes.quoteColor} variant="subheading" align="center">
                 <QuoteGenerator />
-                <p className={classes.authorText}>- Scott Stapp, Creed</p>
         </Typography>
         </footer>
     );
