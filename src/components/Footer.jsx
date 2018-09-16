@@ -14,17 +14,24 @@ const styles = theme => ({
         fontFamily: 'Metal Mania',
         color: 'white'
     },
+    quoteColor: {
+        color: 'white'
+    },
+    authorText: {
+        fontStyle: 'italic'
+    }
 });
 
 const PureFooter = (props) => {
     const { classes } = props;
     return (
         <footer className={classes.footer}>
-            <Typography className={classes.metalFont} variant="display1" align="center" gutterBottom>
+            <Typography className={classes.metalFont} variant="title" align="center" gutterBottom>
                 Scott Stapp Memorial Pick'em League
         </Typography>
-            <Typography className={classes.metalFont} variant="title" align="center" color="textSecondary" component="p">
+            <Typography className={classes.quoteColor} variant="subheading" align="center" component="p">
                 <QuoteGenerator />
+                <p className={classes.authorText}>- Scott Stapp, Creed</p>
         </Typography>
         </footer>
     );
