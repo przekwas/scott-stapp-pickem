@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# 📜 Scott Stapp Memorial Pickem League
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+&nbsp;
 
-## Available Scripts
+## 📁 Table of Contents
 
-In the project directory, you can run:
+-   [🤘 Theming](#-theming)
+-   [🧠 Brainstorming Pages](#-brainstorming-pages)
+-   [🚧 Feature Roadmap](#-feature-roadmap)
 
-### `npm start`
+&nbsp;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🤘 Theming
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Given this whole thing started as an inside joke/meme amongst friends about Creed, throwing in random Creed and Scott Stapp references all ove the place is highly encouraged
 
-### `npm test`
+&nbsp;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧠 Brainstorming Pages
 
-### `npm run build`
+&nbsp;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Login
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+email and password fields should suffice
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+&nbsp;
 
-### `npm run eject`
+#### Register
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+first name, last name, email, username, and password fields - username validation will be upper/lower case a-z, underscore, and 1-9 - passwords will be hashed/salted in case someone is worried i plain text it lol
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+&nbsp;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Standings
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+display current standings among players, ordered by highest score to lowest score - separate pages for full overview of week to week or possibly filters on current page?
 
-## Learn More
+&nbsp;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Profile
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+possible edit personal details form options, teams picked this season, current week's pick with edit option if avail, total score so far, successful and failed picks this season
 
-### Code Splitting
+&nbsp;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Picks
 
-### Analyzing the Bundle Size
+displays this weeks matches (we do Thurs to Mon as a week), disabling completed, on-going, and matches with <5min to kickoff time (this math is gonna suck), modal confirm when saving their week's peek - possibly also disabling a team if they already picked it
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+&nbsp;
 
-### Making a Progressive Web App
+## 🚧 Feature Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   comment section or message boards
+-   getting it done lol
