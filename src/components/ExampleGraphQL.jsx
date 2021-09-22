@@ -4,7 +4,7 @@ import LoadingCard from './LoadingCard';
 
 const ALL_TEAMS = gql`
 	query {
-		getTeams {
+		Teams {
 			id
 			full_name
 			primary_color
