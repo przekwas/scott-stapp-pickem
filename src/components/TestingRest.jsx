@@ -1,32 +1,33 @@
-import { useQuery, gql } from '@apollo/client';
+import { useState, useEffect } from 'react';
+import { teamsService } from '../shared/services';
 
 import LoadingCard from './LoadingCard';
 
-const ALL_TEAMS = gql`
-	query {
-		Teams {
-			id
-			full_name
-			primary_color
-			wiki_logo_url
-		}
-	}
-`;
+const TestingRest = () => {
+	const [teams, setTeams] = useState({
+		loading: true,
+		error: null,
+		data: []
+	});
 
-const ExampleGraphQL = () => {
-	const { loading, error, data } = useQuery(ALL_TEAMS);
+	useEffect(() => {
+		teamsService
+			.getAll()
+			.then(data => setTeams(prev => ({ ...prev, data, loading: false })))
+			.catch(error => setTeams(prev => ({ ...prev, error, loading: false })));
+	}, []);
 
-	if (loading) return <LoadingCard count="3" />;
-	if (error)
+	if (teams.loading) return <LoadingCard count={3} />;
+	if (teams.error)
 		return (
 			<div className="w-1/2 p-4 mx-auto text-red-900 bg-red-100 border border-red-500 rounded-lg shadow-sm">
-				Fuck: {error.message}
+				Fuck: {teams.error.message}
 			</div>
 		);
 
 	return (
 		<div className="flex flex-wrap px-2 overflow-hidden lg:-mx-2 xl:-mx-2">
-			{data.Teams.map(team => (
+			{teams.data.map(team => (
 				<div
 					key={team.id}
 					className="w-full my-1 overflow-hidden lg:my-2 lg:px-2 lg:w-1/3 xl:my-2 xl:px-2 xl:w-1/3">
@@ -44,7 +45,7 @@ const ExampleGraphQL = () => {
 	);
 };
 
-export default ExampleGraphQL;
+export default TestingRest;
 
 /* testing some dumb shit */
 function hexToRgb(hex, a = 1) {
